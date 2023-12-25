@@ -136,6 +136,7 @@ function SignupSigninComponent() {
                     setLoading(false);
                     navigate("./dashboard");
                     toast.success("User authenticated!");
+
                     // IdP data available using getAdditionalUserInfo(result)
                     // ...
                 }).catch((error) => {
@@ -218,9 +219,9 @@ function SignupSigninComponent() {
                     />
                     <Button
                         disabled={loading}
-                        text={loading ? "Loading..." : "Signup Using Email and Password"} onClick={signupWithEmail} />
+                        text={loading ? "Loading..." : "SignUp with Email and Password"} onClick={signupWithEmail} />
                     <p className="p-login">or</p>
-                    <Button onClick={googleAuth} text={loading ? "Loading..." : "Signin Using Google"} blue={true} />
+                    <Button onClick={googleAuth} text={loading ? "Loading..." : "SignUp with Google"} blue={true} />
                     <p className="p-login" style={{ cursor: "pointer" }} onClick={() => setLoginForm(!loginForm)}>Or Have An Account Already ? Click Here</p>
                 </form>
             </div>)}
